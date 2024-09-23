@@ -6,6 +6,7 @@ import { Dashboard } from "./pages/app/dashboard/dashboard";
 import { Orders } from "./pages/app/orders/orders";
 import { SignIn } from "./pages/auth/sign-in";
 import { SignUp } from "./pages/auth/sign-up";
+import { NotFound } from "./pages/404";
 
 export { createBrowserRouter } from "react-router-dom";
 
@@ -13,6 +14,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
+    errorElement: <NotFound />,
     children: [
       { path: "/", element: <Dashboard /> },
       { path: "/orders", element: <Orders /> },
